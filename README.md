@@ -8,6 +8,7 @@
 </p>
 
 <br>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -29,9 +30,9 @@ Este projeto foi baseado no curso grátis de Front-end da RocketSeat
 
 ## 🔖 Layout
 
-(_adicionar imagem aqui_)
+<img src="./github/layout.png">
 
-## :memo: Licença
+## 📝 Licença
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
