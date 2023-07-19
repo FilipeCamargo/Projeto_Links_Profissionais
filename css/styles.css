@@ -95,6 +95,7 @@ body{
     left: 0;
     z-index: 1; /* sobe o elemento para outra camada */
     transform: translateY(-50%); /* para alinhar elementos absolutos na horizontal */
+    animation: slide-out 0.4s;
 }
 
 #switch span{
@@ -108,8 +109,10 @@ body{
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    
+    animation: slide-in 0.4s forwards; /* Aplica a animacao da esquerda para a direita  */
+    /* right: 0;
+    left: initial; */
 }
 
 ul{
@@ -177,4 +180,27 @@ footer{
     .light{
         --url-bg: url(../assets/bg-desktop-light.jpg);
     }
+}
+
+
+/* Animação */
+
+@keyframes slide-in {
+    from{
+        left: 0%;
+    }
+    to{
+        left: 50%;
+    }
+
+}
+
+@keyframes slide-out {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0%;
+    }
+
 }
