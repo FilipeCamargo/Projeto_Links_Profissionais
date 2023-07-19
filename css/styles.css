@@ -42,12 +42,16 @@ body{
     /* é possível colocar background: color image repeat position/size */
 
     background: var(--url-bg) no-repeat top center/cover;
+
+    height: 100vh;
 }
 
 #container{ /* caixa display block */
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     margin: auto; /* para alinhar a div no centro */
     margin-top: 56px;
+
     
     padding: 0px 24px;
 }
@@ -161,4 +165,16 @@ ul li a:hover{
 
 footer{
     text-align: center;
+}
+
+/* media background */
+
+@media (min-width: 700px) {
+    :root{
+        --url-bg: url(../assets/bg-desktop.jpg);
+    }
+
+    .light{
+        --url-bg: url(../assets/bg-desktop-light.jpg);
+    }
 }
