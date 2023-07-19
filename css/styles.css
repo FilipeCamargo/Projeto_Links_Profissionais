@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: white;
+    --url-bg: url(../assets/bg-mobile.jpg);
+    --strock-color: rgba(255,255,255, 0.1);
+    --surface-color: rgba(255,255,255,0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --strock-color-hover: rgba(255,255,255, 0.5);
+    --switch-bg-url:url(../assets/moon-stars.svg)
+}
+
+.light{
+
+    --text-color:black;
+    --url-bg: url(../assets/bg-mobile-light.jpg);
+    --strock-color: rgba(0, 0, 0, 0.1);
+    --surface-color: rgba(0,0,0,0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --strock-color-hover: rgba(0,0,0, 0.5);
+    --switch-bg-url:url(../assets/sun.svg)
+}
+
+body *{
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}
+
+body{
+
+    /*background-image: url(../assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center; /* alinha o centro da imagem n eixo ye no eixo x
+    background-size: cover;*/
+
+    /* shorthand - atalho background*/
+
+    /* é possível colocar background: color image repeat position/size */
+
+    background: var(--url-bg) no-repeat top center/cover;
+}
+
+#container{ /* caixa display block */
+    width: 360px;
+    margin: auto; /* para alinhar a div no centro */
+    margin-top: 56px;
+    
+    padding: 0px 24px;
+}
+
+#profile{
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{ /* img eh inline*/
+    /*display: block; utiliza toda a argura para si*/
+    width: 112px;
+    /*margin: auto;  alinha as margens dos lados para ficar no meio*/
+    border-radius: 50%;
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px; /* a altura da linha */
+    margin-top: 8px;
+}
+
+/*switch*/
+
+#switch{
+    position: relative;
+    width: 64px;
+
+    margin: 4px auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border-radius: 50%;
+    border:0;
+
+    position: absolute; /* faz o elemento ficar em posicao absoluta */
+    top: 50%;
+    left: 0;
+    z-index: 1; /* sobe o elemento para outra camada */
+    transform: translateY(-50%); /* para alinhar elementos absolutos na horizontal */
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background:var(--surface-color);
+    border: 1px solid var(--strock-color);
+    border-radius: 9999px;
+    backdrop-filter: blur(4px);
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid var(--strock-color);
+    border-radius: 8px;
+    background-color: var(--surface-color);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    transition: background 0.3s;
+}
+
+ul li a:hover{
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--strock-color-hover);
+}
+
+
+#social-links{
+    /* social links*/
+    display: flex; /* Alinha todos na mesma linha */
+    justify-content: center; /* por conta do displayflex se faz necessario justificar o conteudo */
+
+    /*gap: 16px;*/ /* Reconhece os elementos de dentro e coloca espaço entre eles */
+    padding: 20px 0px; /* 24px em cima e em baixo e 0 dos lados*/
+    font-size: 24px;
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover{
+    background: var(--surface-color-hover);
+}
+
+footer{
+    text-align: center;
+}
